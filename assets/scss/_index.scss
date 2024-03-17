@@ -1,0 +1,426 @@
+.header {
+  width: 100%;
+  position: relative;
+  font-family: "DM Sans", sans-serif;
+  .container {
+    .headerContent {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .navBar {
+        .navList {
+          display: flex;
+          align-items: center;
+          gap: 32px;
+          .navItem {
+            cursor: pointer;
+            a {
+              color: #fff;
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 100%;
+            }
+          }
+        }
+      }
+      .appealBtn {
+        display: flex;
+        padding: 20px 32px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 35px;
+        background: #fff;
+        .appeal {
+          color: #111;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 100%;
+        }
+      }
+    }
+  }
+  .downMenu {
+    display: none;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: top 0.3s ease;
+    z-index: 999;
+    padding: 20px;
+    background-color: #1d1d1e;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+  }
+}
+
+.hero {
+  width: 100%;
+  .heroDesign {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .container {
+    .heroContent {
+      height: 82vh;
+      display: flex;
+      align-items: flex-end;
+      gap: 32px;
+      .infoLeft {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        .infoItem {
+          display: flex;
+        }
+        .infoItem:nth-child(1) {
+          .heroButtons {
+            display: flex;
+            gap: 8px;
+            font-family: "Chakra Petch", sans-serif;
+            a {
+              color: #fff;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 100%;
+              display: flex;
+              padding: 12px 24px;
+              justify-content: center;
+              align-items: center;
+              gap: 10px;
+              border-radius: 20px;
+              background: rgba(255, 255, 255, 0.25);
+              backdrop-filter: blur(12px);
+            }
+          }
+        }
+        .infoItem:nth-child(2) {
+          .heroTitle {
+            width: 70%;
+            font-family: "DM Sans", sans-serif;
+            color: #fff;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 115%;
+          }
+        }
+        .infoItem:nth-child(3) {
+          h2 {
+            font-family: "DM Sans", sans-serif;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 115%;
+            background: linear-gradient(
+              90deg,
+              #fff 0%,
+              rgba(255, 255, 255, 0) 99.97%
+            );
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+      }
+      .infoRight {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+
+        gap: 32px;
+        .infoItem:nth-child(1) {
+          position: relative;
+          width: 305px;
+          height: 48px;
+          background-image: url("../images/buttoncover.svg");
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 35px;
+          .btnCover {
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-radius: 35px;
+            width: 305px;
+            height: 48px;
+            opacity: 0.75;
+            background: linear-gradient(90deg, #121314 80%, #232425 100%);
+          }
+          span {
+            color: #fff;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 100%;
+            font-family: "Dm sans", sans-serif;
+            z-index: 1;
+          }
+        }
+        .infoItem:nth-child(2) {
+          width: 80%;
+          p {
+            color: #fff;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 125%;
+            font-family: "DM Sans", sans-serif;
+          }
+        }
+        .infoItem:nth-child(3) {
+          width: 177px;
+          height: 58px;
+          display: flex;
+          padding: 20px 40px;
+          justify-content: center;
+          align-items: center;
+          border-radius: 30px;
+          border: 1px solid #02d4ff;
+          background: var(
+            --main-gr,
+            linear-gradient(95deg, #017dff 0%, #01d5ff 100%)
+          );
+          .appeal {
+            color: #fff;
+            font-family: "Chakra Petch", sans-serif;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 822px) {
+  .header {
+    width: 100%;
+    position: relative;
+    font-family: "DM Sans", sans-serif;
+    .container {
+      margin: 27px 16px;
+      .headerContent {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .navBar {
+          .navList {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            .navItem {
+              cursor: pointer;
+              a {
+                color: #fff;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 100%;
+              }
+            }
+            .navItem:nth-child(1) {
+              display: none;
+            }
+            .navItem:nth-child(2) {
+              display: none;
+            }
+            .navItem:nth-child(3) {
+              display: none;
+            }
+            .navItem:nth-child(4) {
+              display: flex;
+              padding: 16px 24px;
+              justify-content: center;
+              align-items: center;
+              border-radius: 35px;
+              background: rgba(255, 255, 255, 0.06);
+            }
+          }
+        }
+        .appealBtn {
+          display: none;
+        }
+      }
+    }
+    .downMenu {
+      display: none;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      transition: top 0.3s ease;
+      z-index: 999;
+      padding: 20px;
+      background-color: #1d1d1e;
+      align-items: center;
+      justify-content: center;
+      font-size: 60px;
+    }
+  }
+}
+
+@media (max-width: 822px) {
+  .hero {
+    width: 100%;
+    
+    .heroDesign {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+    }
+    .container {
+      .heroContent {
+        width: 100%;
+        height: auto;
+        padding-top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+        .infoLeft {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          .infoItem {
+            display: flex;
+          }
+          .infoItem:nth-child(1) {
+            .heroButtons {
+              display: flex;
+              gap: 8px;
+              font-family: "Chakra Petch", sans-serif;
+              a {
+                color: #fff;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 100%;
+                display: flex;
+                padding: 12px 24px;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                border-radius: 20px;
+                background: rgba(255, 255, 255, 0.25);
+                backdrop-filter: blur(12px);
+              }
+            }
+          }
+          .infoItem:nth-child(2) {
+            .heroTitle {
+              width: 100%;
+              font-family: "DM Sans", sans-serif;
+              color: #fff;
+              font-size: 32px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 115%;
+            }
+          }
+          .infoItem:nth-child(3) {
+            h2 {
+              font-family: "DM Sans", sans-serif;
+              font-size: 32px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 115%;
+              background: linear-gradient(
+                90deg,
+                #fff 0%,
+                rgba(255, 255, 255, 0) 99.97%
+              );
+              background-clip: text;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+          }
+        }
+        .infoRight {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+
+          gap: 32px;
+          .infoItem:nth-child(1) {
+            position: relative;
+            width: 305px;
+            height: 48px;
+            background-image: url("../images/buttoncover.svg");
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 35px;
+            .btnCover {
+              position: absolute;
+              left: 0;
+              top: 0;
+              border-radius: 35px;
+              width: 305px;
+              height: 48px;
+              opacity: 0.75;
+              background: linear-gradient(90deg, #121314 80%, #232425 100%);
+            }
+            span {
+              color: #fff;
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 100%;
+              font-family: "Dm sans", sans-serif;
+              z-index: 1;
+            }
+          }
+          .infoItem:nth-child(2) {
+            width: 100%;
+            p {
+              color: #fff;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 125%; /* 20px */
+              font-family: "DM Sans", sans-serif;
+            }
+          }
+          .infoItem:nth-child(3) {
+            width: 177px;
+            height: 58px;
+            display: flex;
+            padding: 20px 40px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 30px;
+            border: 1px solid #02d4ff;
+            background: var(
+              --main-gr,
+              linear-gradient(95deg, #017dff 0%, #01d5ff 100%)
+            );
+            .appeal {
+              color: #fff;
+              font-family: "Chakra Petch", sans-serif;
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
