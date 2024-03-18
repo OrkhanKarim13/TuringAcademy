@@ -20,3 +20,10 @@ body {
 .container {
   margin: 24px 56px;
 }
+
+
+@media(max-width:522px){
+    .container {
+        margin: 24px 16px;
+      }
+}

@@ -62,6 +62,8 @@
 .hero {
   width: 100%;
   .heroDesign {
+    width:549px;
+    height: 675px;
     position: absolute;
     left: 0;
     top: 0;
@@ -210,7 +212,7 @@
     position: relative;
     font-family: "DM Sans", sans-serif;
     .container {
-      margin: 27px 16px;
+      margin: 24px 16px;
       .headerContent {
         width: 100%;
         display: flex;
@@ -287,11 +289,11 @@
       .heroContent {
         width: 100%;
         height: auto;
-        padding-top: 100px;
+        padding-top: 72px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 32px;
+        gap: 72px;
         .infoLeft {
           width: 100%;
           display: flex;
@@ -359,7 +361,7 @@
           gap: 32px;
           .infoItem:nth-child(1) {
             position: relative;
-            width: 305px;
+            width: 100%;
             height: 48px;
             background-image: url("../images/buttoncover.svg");
             display: flex;
@@ -371,7 +373,7 @@
               left: 0;
               top: 0;
               border-radius: 35px;
-              width: 305px;
+              width:100%;
               height: 48px;
               opacity: 0.75;
               background: linear-gradient(90deg, #121314 80%, #232425 100%);
