@@ -64,16 +64,19 @@
   width: 100%;
   .heroDesign {
     width:549px;
-    height: 675px;
+    height: 750px;
+    overflow: hidden;
     position: absolute;
     left: 0;
     top: 0;
+    z-index: -100;
   }
   .container {
     .heroContent {
       height: 82vh;
       display: flex;
       align-items: flex-end;
+      
       gap: 32px;
       
       .infoLeft {

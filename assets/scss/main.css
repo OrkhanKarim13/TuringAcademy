@@ -61,10 +61,12 @@
 }
 .hero .heroDesign {
   width: 549px;
-  height: 675px;
+  height: 750px;
+  overflow: hidden;
   position: absolute;
   left: 0;
   top: 0;
+  z-index: -100;
 }
 .hero .container .heroContent {
   height: 82vh;
