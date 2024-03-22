@@ -4,5 +4,26 @@ document
     var downMenu = document.querySelector(".downMenu");
     downMenu.style.display =
       downMenu.style.display === "none" ? "block" : "none";
-    downMenu.style.top = downMenu.style.top === "100px" ? "150px" : "100px"; // Eğer downMenu görünürse, 100px aşağıda değilse 150px aşağıda göster
+  });
+
+
+
+  // slider
+
+  var swiper = new Swiper(".mySwiper", {
+    effect: "coverflow",
+    grabCursor: false,
+    centeredSlides: false,
+    slidesPerView: "auto",
+
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 0,
+      modifier: 0,
+      slideShadows: true,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
   });

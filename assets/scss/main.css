@@ -43,7 +43,7 @@
 }
 .header .downMenu {
   display: none;
-  position: fixed;
+  position: absolute;
   width: 100%;
   top: 0;
   left: 0;
@@ -69,9 +69,9 @@
   z-index: -100;
 }
 .hero .container .heroContent {
-  height: 82vh;
+  height: 100vh;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   gap: 32px;
 }
 .hero .container .heroContent .infoLeft {
@@ -79,7 +79,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  z-index: 1000;
+  z-index: 10;
 }
 .hero .container .heroContent .infoLeft .infoItem {
   display: flex;
@@ -191,6 +191,75 @@
   line-height: 100%;
 }
 
+.cardBox {
+  width: 100%;
+}
+.cardBox .cardBoxContent {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+.cardBox .cardBoxContent .card {
+  cursor: pointer;
+  display: flex;
+  padding: 48px;
+  height: 332px;
+  width: 32%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-radius: 12px;
+  border: 1px solid #999;
+  background: rgba(17, 17, 17, 0.35);
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+}
+.cardBox .cardBoxContent .card img {
+  width: 80px;
+  height: 80px;
+}
+.cardBox .cardBoxContent .card .cardTitle {
+  color: #fff;
+  font-family: "DM Sans", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.gallery {
+  width: 100%;
+  padding: 96px 0;
+}
+.gallery .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 48px;
+}
+.gallery .container .galleryTitle {
+  color: #fff;
+  font-family: "DM Sans", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%; /* 25px */
+}
+.gallery .container .galleryContent {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1%;
+}
+.gallery .container .galleryContent .galleryItem {
+  background-color: #fff;
+  height: 432px;
+  width: 24%;
+}
+
 @media (max-width: 822px) {
   .header {
     width: 100%;
@@ -243,9 +312,9 @@
   }
   .header .downMenu {
     display: none;
-    position: fixed;
+    position: absolute;
     width: 100%;
-    top: 0;
+    top: 80px;
     left: 0;
     transition: top 0.3s ease;
     z-index: 999;
@@ -254,6 +323,7 @@
     align-items: center;
     justify-content: center;
     font-size: 60px;
+    z-index: 1000;
   }
 }
 @media (max-width: 822px) {
@@ -263,8 +333,8 @@
   .hero .heroDesign {
     position: absolute;
     left: 0;
-    top: 0;
     overflow: hidden;
+    width: 100%;
   }
   .hero .container .heroContent {
     width: 100%;
@@ -401,7 +471,8 @@
 
 body {
   background: rgb(18, 19, 20);
-  background: linear-gradient(50deg, rgb(18, 19, 20) 53%, rgb(10, 69, 131) 85%, rgb(1, 125, 255) 100%, rgb(1, 125, 255) 100%);
+  background: linear-gradient(90deg, rgb(18, 19, 20) 53%, rgb(10, 69, 131) 85%, rgb(1, 125, 255) 100%, rgb(1, 125, 255) 100%);
+  background-repeat: no-repeat;
 }
 
 .container {
@@ -412,4 +483,42 @@ body {
   .container {
     margin: 24px 16px;
   }
+}
+html body {
+  position: relative;
+}
+html body .slider {
+  width: 100%;
+  padding: 96px 0;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 48px;
+}
+html body .slider .container .sliderHeader {
+  width: 100%;
+}
+html body .slider .container .sliderHeader .sliderText {
+  width: 40%;
+  color: #fff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  font-family: "DM Sans", sans-serif;
+}
+html body .slider .swiper {
+  width: 100%;
+}
+html body .slider .swiper .swiper-wrapper {
+  gap: 20px;
+}
+html body .slider .swiper .swiper-wrapper .swiper-slide {
+  background-color: #fff;
+  width: 430px;
+  height: 322px;
+}
+html body .slider .swiper .swiper-wrapper .swiper-slide img {
+  display: block;
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */
