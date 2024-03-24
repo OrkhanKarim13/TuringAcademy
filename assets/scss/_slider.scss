@@ -4,21 +4,21 @@ html {
     .slider {
       width: 100%;
       padding: 96px 0;
-      display: flex;
-      align-items: flex-start;
-      flex-direction: column;
-      gap: 48px;
       .container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        gap: 24px;
         .sliderHeader {
-          width: 100%;
+          width: 23%;
+          margin-bottom: 24px;
           .sliderText {
-            width: 40%;
             color: #fff;
             font-size: 20px;
             font-style: normal;
             font-weight: 400;
             line-height: 125%;
-            font-family: "DM Sans", sans-serif;
           }
         }
       }
@@ -26,15 +26,20 @@ html {
         width: 100%;
         .swiper-wrapper {
           gap: 20px;
-          .swiper-slide {
+          .firstSlide {
             background-color: #fff;
-            width: 430px;
-            height: 322px;
+            width: 335px;
+            height: 432px;
 
             img {
               display: block;
               width: 100%;
             }
+          }
+          .secondSlide {
+            width: 430px;
+            height: 332px;
+            background-color: #fff;
           }
         }
       }
