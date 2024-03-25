@@ -8,7 +8,7 @@
   overflow: hidden;
   position: absolute;
   left: 0;
-  top: -30px;
+  top: -25px;
   z-index: -100;
 }
 .hero .container .heroContent {
@@ -32,7 +32,7 @@
   gap: 8px;
   font-family: "DM Sans", sans-serif;
 }
-.hero .container .heroContent .infoLeft .infoItem:nth-child(1) .heroButtons a {
+.hero .container .heroContent .infoLeft .infoItem:nth-child(1) .heroButtons span {
   color: #fff;
   font-size: 14px;
   font-style: normal;
@@ -83,6 +83,8 @@
   align-items: center;
   justify-content: center;
   border-radius: 35px;
+  border: none;
+  cursor: pointer;
 }
 .hero .container .heroContent .infoRight .infoItem:nth-child(1) .btnCover {
   position: absolute;
@@ -132,6 +134,40 @@
   font-style: normal;
   font-weight: 500;
   line-height: 100%;
+}
+.hero .container .heroContent .infoRight .modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.hero .container .heroContent .infoRight .modal .modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.hero .container .heroContent .infoRight .modal .close {
+  position: absolute;
+  top: 0%;
+  right: 10px;
+  font-size: 50px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10000;
+}
+.hero .container .heroContent .infoRight .modal .close:hover, .hero .container .heroContent .infoRight .modal .close:focus {
+  color: black;
+  text-decoration: none;
+}
+.hero .container .heroContent .infoRight .modal video {
+  width: 100%;
+  height: 50%;
 }
 
 .cardBox {
@@ -190,10 +226,27 @@
   font-size: 28px;
   background-color: transparent;
   color: #fff;
+  cursor: pointer;
 }
 
 .sidebar.active {
   right: 0; /* Menüyü görünür hale getir */
+}
+
+.team {
+  width: 100%;
+}
+.team .container .sliderText {
+  width: 30%;
+  color: #fff;
+  font-family: "DM sans", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%; /* 25px */
+}
+.team .teamSlider {
+  background-image: url("../images/bg-grid.svg");
 }
 
 .information {
@@ -214,7 +267,7 @@
   justify-content: center;
   flex-direction: column;
   gap: 32px;
-  background-color: #F4C644;
+  background-color: #f4c644;
   border: 1px solid black;
 }
 .information .infoContnet .infoCard .infoCardTitle {
@@ -305,7 +358,7 @@
     gap: 8px;
     font-family: "Chakra Petch", sans-serif;
   }
-  .hero .container .heroContent .infoLeft .infoItem:nth-child(1) .heroButtons a {
+  .hero .container .heroContent .infoLeft .infoItem:nth-child(1) .heroButtons span {
     color: #fff;
     font-size: 14px;
     font-style: normal;
@@ -408,6 +461,7 @@
   }
   .cardBox {
     width: 100%;
+    padding-top: 96px;
   }
   .cardBox .cardBoxContent {
     width: 100%;
@@ -443,6 +497,9 @@
     font-weight: 400;
     line-height: 100%;
   }
+  .team .container .sliderText {
+    width: 100%;
+  }
   .information {
     display: none;
   }
@@ -453,6 +510,7 @@
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
+  font-family: "DM sans", sans-serif;
 }
 
 body {
@@ -466,7 +524,12 @@ body {
 }
 
 @media (max-width: 522px) {
-  .container {
+  body {
+    background: rgb(18, 19, 20);
+    background: linear-gradient(90deg, rgb(18, 19, 20) 53%, rgb(10, 69, 131) 100%, rgba(1, 125, 255, 0.5) 100%, rgba(1, 125, 255, 0.5) 100%);
+    background-repeat: no-repeat;
+  }
+  body .container {
     margin: 24px 16px;
   }
 }
@@ -565,6 +628,14 @@ html body .slider .swiper .swiper-wrapper .thirdSlide .slideColPart .slideColPri
   background: #fcd053;
   padding: 8px 12px;
 }
+html body .slider .swiper .swiper-wrapper .fourthSlide {
+  width: 212px;
+}
+html body .slider .swiper .swiper-wrapper .fourthSlide img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 
 @media (max-width: 822px) {
   html body {
@@ -572,7 +643,7 @@ html body .slider .swiper .swiper-wrapper .thirdSlide .slideColPart .slideColPri
   }
   html body .slider {
     width: 100%;
-    padding: 96px 0;
+    padding: 48px 0;
   }
   html body .slider .container {
     display: flex;
@@ -922,9 +993,6 @@ html body .slider .swiper .swiper-wrapper .thirdSlide .slideColPart .slideColPri
     position: relative;
     font-family: "DM Sans", sans-serif;
   }
-  .header .container {
-    padding: 24px 16px;
-  }
   .header .container .headerContent {
     width: 100%;
     display: flex;
@@ -980,5 +1048,54 @@ html body .slider .swiper .swiper-wrapper .thirdSlide .slideColPart .slideColPri
     justify-content: center;
     font-size: 60px;
     z-index: 1000;
+  }
+  .footer {
+    width: 100%;
+    padding: 48px 0;
+  }
+  .footer .container .footerContent {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+  .footer .container .footerContent .footerInfo {
+    width: 100%;
+    height: 491px;
+  }
+  .footer .container .footerContent .footerInfo .footerHeader .footerTitle {
+    width: 100%;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 115%;
+  }
+  .footer .container .footerContent .footerInfo .footerHeader .secFooterTitle {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 115%;
+  }
+  .footer .container .footerContent .footerInfo .footerContact .contactList .contactItem:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .footer .container .footerContent .footerInfo .footerContact .contactList .contactItem:nth-child(3) .address {
+    width: 100%;
+  }
+  .footer .container .footerContent .footerForm {
+    width: 100%;
+  }
+  .footer .container .footerContent .footerForm .form .formPart {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .footer .container .footerContent .footerForm .form .formPart .formLeftSide {
+    width: 100%;
+  }
+  .footer .container .footerContent .footerForm .form .formPart .formRightSide {
+    width: 100%;
   }
 }/*# sourceMappingURL=main.css.map */

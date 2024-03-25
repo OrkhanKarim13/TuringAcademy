@@ -1,5 +1,3 @@
-
-
 .hero {
   width: 100%;
   .heroDesign {
@@ -8,7 +6,7 @@
     overflow: hidden;
     position: absolute;
     left: 0;
-    top: -30px;
+    top: -25px;
     z-index: -100;
   }
   .container {
@@ -32,7 +30,7 @@
             display: flex;
             gap: 8px;
             font-family: "DM Sans", sans-serif;
-            a {
+            span {
               color: #fff;
               font-size: 14px;
               font-style: normal;
@@ -82,7 +80,6 @@
         width: 40%;
         display: flex;
         flex-direction: column;
-
         gap: 32px;
         .infoItem:nth-child(1) {
           position: relative;
@@ -93,6 +90,8 @@
           align-items: center;
           justify-content: center;
           border-radius: 35px;
+          border: none;
+          cursor: pointer;
           .btnCover {
             position: absolute;
             left: 0;
@@ -113,6 +112,7 @@
             z-index: 1;
           }
         }
+
         .infoItem:nth-child(2) {
           width: 80%;
           p {
@@ -144,6 +144,45 @@
             font-style: normal;
             font-weight: 500;
             line-height: 100%;
+          }
+        }
+        .modal {
+          display: none;
+          position: fixed;
+          z-index: 999;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.7);
+
+          .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+
+          .close {
+            position: absolute;
+            top: 0%;
+            right: 10px;
+            font-size: 50px;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 10000;
+
+            &:hover,
+            &:focus {
+              color: black;
+              text-decoration: none;
+            }
+          }
+
+          video {
+            width: 100%;
+            height: 50%;
           }
         }
       }
@@ -190,10 +229,10 @@
 .sidebar {
   position: fixed;
   top: 0;
-  right: -50%; 
+  right: -50%;
   width: 50%;
   height: 100%;
-  background: rgba(17, 17, 17, );
+  background: rgba(17, 17, 17);
   transition: right 0.3s ease-in-out;
   z-index: 999;
   .close-btn {
@@ -204,6 +243,7 @@
     font-size: 28px;
     background-color: transparent;
     color: #fff;
+    cursor: pointer;
   }
 }
 
@@ -211,9 +251,23 @@
   right: 0; /* Menüyü görünür hale getir */
 }
 
-
-
-
+.team {
+  width: 100%;
+  .container {
+    .sliderText {
+      width: 30%;
+      color: #fff;
+      font-family: "DM sans", sans-serif;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 125%; /* 25px */
+    }
+  }
+  .teamSlider {
+    background-image: url("../images/bg-grid.svg");
+  }
+}
 
 .information {
   width: 100%;
@@ -231,8 +285,8 @@
       justify-content: center;
       flex-direction: column;
       gap: 32px;
-      background-color: #F4C644;
-      border: 1px solid black ;
+      background-color: #f4c644;
+      border: 1px solid black;
       .infoCardTitle {
         width: 100%;
         display: flex;
@@ -281,19 +335,15 @@
   }
 }
 
-.thirdSlider{
+.thirdSlider {
   display: none;
 }
 
-
-
 @media (min-width: 822px) {
-  .information{
-display: block;
-
+  .information {
+    display: block;
   }
 }
-
 
 @media (max-width: 822px) {
   .hero {
@@ -328,7 +378,7 @@ display: block;
               display: flex;
               gap: 8px;
               font-family: "Chakra Petch", sans-serif;
-              a {
+              span {
                 color: #fff;
                 font-size: 14px;
                 font-style: normal;
@@ -448,6 +498,7 @@ display: block;
   }
   .cardBox {
     width: 100%;
+    padding-top: 96px ;
     .cardBoxContent {
       width: 100%;
       display: flex;
@@ -483,10 +534,15 @@ display: block;
     }
   }
 
+  .team{
+    .container{
+      .sliderText{
+        width: 100%;
+      }
+    }
+  }
 
-  .information{
+  .information {
     display: none;
   }
 }
-
-

@@ -41,3 +41,25 @@ function toggleSidebar() {
   let sidebar = document.getElementById("sidebar");
   sidebar.classList.toggle("active");
 }
+
+
+// home video
+
+document.getElementById("playButton").addEventListener("click", function() {
+  var modal = document.getElementById("videoModal");
+  var videoPlayer = document.getElementById("videoPlayer");
+  modal.style.display = "block";
+  videoPlayer.play();
+});
+
+document.querySelector(".close").addEventListener("click", function() {
+  var modal = document.getElementById("videoModal");
+  var videoPlayer = document.getElementById("videoPlayer");
+  videoPlayer.pause();
+  modal.style.display = "none";
+});
+
+
+
+
+

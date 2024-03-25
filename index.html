@@ -71,8 +71,8 @@
             <div class="infoLeft">
               <div class="infoItem">
                 <div class="heroButtons">
-                  <a href="/">Dizayn</a>
-                  <a href="/">Proqramlaşdırma</a>
+                  <span>Dizayn</span>
+                  <span>Proqramlaşdırma</span>
                 </div>
               </div>
               <div class="infoItem">
@@ -83,10 +83,10 @@
               <div class="infoItem"><h2>Let’s do it together...</h2></div>
             </div>
             <div class="infoRight">
-              <a href="/" class="infoItem"
-                ><div class="btnCover"></div>
-                <span>watch showreel</span></a
-              >
+              <button class="infoItem" id="playButton">
+                <div class="btnCover"></div>
+                <span>watch showreel</span>
+              </button>
               <div class="infoItem">
                 <p class="heroText">
                   Lorem ipsum dolor sit amet consectetur. Sit duis massa pretium
@@ -97,6 +97,14 @@
               <a href="/" class="infoItem">
                 <p class="appeal">Müraciət et</p>
               </a>
+              <div id="videoModal" class="modal">
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <video id="videoPlayer" controls class="modal-video">
+                    <source src="./assets/videos/home.mp4" type="video/mp4" />
+                  </video>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -176,15 +184,48 @@
           </div>
         </div>
       </section>
-      <section class="team">
+      <section class="slider team">
         <div class="container">
-          <h4 class="teamInfo">
+          <h4 class="sliderText">
             Icma Lorem ipsum dolor sit amet consectetur. Sit duis massa pretium
             enim hac. Egestas sed integer feugiat viverra molestie auctor turpis
-            aliquet.
+            aliquet. fourth
           </h4>
         </div>
-        <div class="teamImages"></div>
+        <div class="swiper mySwiper teamSlider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide fourthSlide">
+              <img src="./assets/images/a.png" alt="" />
+            </div>
+            <div class="swiper-slide fourthSlide">
+              <img src="./assets/images/b.png" alt="" />
+            </div>
+            <div class="swiper-slide fourthSlide">
+              <img src="./assets/images/c.png" alt="" />
+            </div>
+            <div class="swiper-slide fourthSlide">
+              <img src="./assets/images/d.png" alt="" />
+            </div>
+            <div class="swiper-slide fourthSlide">
+              <img src="./assets/images/e.png" alt="" />
+            </div>
+            <div class="swiper-slide fourthSlide">
+              <img src="./assets/images/f.png" alt="" />
+            </div>
+            <div class="swiper-slide fourthSlide">
+              <img src="./assets/images/a.png" alt="" />
+            </div>
+            <div class="swiper-slide fourthSlide">
+              <img src="./assets/images/b.png" alt="" />
+            </div>
+            <div class="swiper-slide fourthSlide">
+              <img src="./assets/images/c.png" alt="" />
+            </div>
+            <div class="swiper-slide fourthSlide">
+              <img src="./assets/images/f.png" alt="" />
+            </div>
+          </div>
+        </div>
       </section>
       <section class="information">
         <div class="infoContnet">
