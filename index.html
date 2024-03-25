@@ -104,29 +104,32 @@
       <section class="cardBox">
         <div class="container">
           <div class="cardBoxContent">
-            <div class="card">
+            <div class="card" onclick="toggleSidebar()">
               <img src="./assets/images/Vector.svg" alt="icon" />
               <h4 class="cardTitle">UX/UI Design</h4>
             </div>
-            <div class="card">
+            <div class="card" onclick="toggleSidebar()">
               <img src="./assets/images/Vector2.svg" alt="icon" />
               <h4 class="cardTitle">Java Programming</h4>
             </div>
-            <div class="card">
+            <div class="card" onclick="toggleSidebar()">
               <img src="./assets/images/Vector3.svg" alt="icon" />
               <h4 class="cardTitle">Front-end</h4>
             </div>
-            <div class="card">
+            <div class="card" onclick="toggleSidebar()">
               <img src="./assets/images/Vector3.svg" alt="icon" />
               <h4 class="cardTitle">Front-end</h4>
             </div>
-            <div class="card">
+            <div class="card" onclick="toggleSidebar()">
               <img src="./assets/images/Vector3.svg" alt="icon" />
               <h4 class="cardTitle">Front-end</h4>
             </div>
           </div>
         </div>
       </section>
+      <div class="sidebar" id="sidebar">
+        <button onclick="toggleSidebar()" class="close-btn">Close</button>
+      </div>
 
       <section class="slider">
         <div class="container">
@@ -187,7 +190,7 @@
         <div class="infoContnet">
           <div class="infoCard">
             <div class="infoCardTitle">
-              <h4 class="topLeft">Creating Awwwesome Landing Pages</h4>
+              <a href="/" class="topLeft">Creating Awwwesome Landing Pages</a>
               <span class="topRight">Son 17 yer</span>
             </div>
             <div class="cardText">
@@ -197,7 +200,7 @@
           </div>
           <div class="infoCard">
             <div class="infoCardTitle">
-              <h4 class="topLeft">Information Architecture</h4>
+              <a href="/" class="topLeft">Information Architecture</a>
               <span class="topRight">Son 1 yer</span>
             </div>
             <div class="cardText">
@@ -207,7 +210,7 @@
           </div>
           <div class="infoCard">
             <div class="infoCardTitle">
-              <h4 class="topLeft">Typhography</h4>
+              <a href="/" class="topLeft">Typhography</a>
               <span class="topRight">Yerlər tükənib 😐</span>
             </div>
             <div class="cardText">
@@ -217,12 +220,101 @@
           </div>
           <div class="infoCard">
             <div class="infoCardTitle">
-              <h4 class="topLeft">Color Thory</h4>
+              <a href="/" class="topLeft">Color Thory</a>
               <span class="topRight">Son 17 yer</span>
             </div>
             <div class="cardText">
               <span class="cardDate">01 May 2024</span
               ><span class="cardPrice">19 AZN</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slider thirdSlider">
+        <div class="container">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide thirdSlide">
+                <div class="slideColPart">
+                  <h4 class="slideColtitle">
+                    Creating Awwwesome Landing Pages
+                  </h4>
+                </div>
+                <div class="slideColPart">
+                  <p class="slideColDate">03 Aprel 2024</p>
+                </div>
+                <div class="slideColPart">
+                  <p class="slideColPlace">Son <span>17 yer</span></p>
+                </div>
+                <div class="slideColPart">
+                  <p class="slideColPrice"><a href="/">Ödənişsiz</a></p>
+                </div>
+              </div>
+              <div class="swiper-slide thirdSlide">
+                <div class="slideColPart">
+                  <h4 class="slideColtitle">
+                    Creating Awwwesome Landing Pages
+                  </h4>
+                </div>
+                <div class="slideColPart">
+                  <p class="slideColDate">03 Aprel 2024</p>
+                </div>
+                <div class="slideColPart">
+                  <p class="slideColPlace">Son <span>17 yer</span></p>
+                </div>
+                <div class="slideColPart">
+                  <p class="slideColPrice"><a href="/">Ödənişsiz</a></p>
+                </div>
+              </div>
+              <div class="swiper-slide thirdSlide">
+                <div class="slideColPart">
+                  <h4 class="slideColtitle">
+                    Creating Awwwesome Landing Pages
+                  </h4>
+                </div>
+                <div class="slideColPart">
+                  <p class="slideColDate">03 Aprel 2024</p>
+                </div>
+                <div class="slideColPart">
+                  <p class="slideColPlace">Son <span>17 yer</span></p>
+                </div>
+                <div class="slideColPart">
+                  <p class="slideColPrice"><a href="/">Ödənişsiz</a></p>
+                </div>
+              </div>
+              <div class="swiper-slide thirdSlide">
+                <div class="slideColPart">
+                  <h4 class="slideColtitle">
+                    Creating Awwwesome Landing Pages
+                  </h4>
+                </div>
+                <div class="slideColPart">
+                  <p class="slideColDate">03 Aprel 2024</p>
+                </div>
+                <div class="slideColPart">
+                  <p class="slideColPlace">Son <span>17 yer</span></p>
+                </div>
+                <div class="slideColPart">
+                  <p class="slideColPrice"><a href="/">Ödənişsiz</a></p>
+                </div>
+              </div>
+              <div class="swiper-slide thirdSlide">
+                <div class="slideColPart">
+                  <h4 class="slideColtitle">
+                    Creating Awwwesome Landing Pages
+                  </h4>
+                </div>
+                <div class="slideColPart">
+                  <p class="slideColDate">03 Aprel 2024</p>
+                </div>
+                <div class="slideColPart">
+                  <p class="slideColPlace">Son <span>17 yer</span></p>
+                </div>
+                <div class="slideColPart">
+                  <p class="slideColPrice"><a href="/">Ödənişsiz</a></p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -245,13 +337,62 @@
                   <a href="/">contact@turing.edu.az</a>
                 </li>
                 <li class="contactItem">
-                  <a href="/">Əhməd Cavad 7, İçərişəhər, Bakı, Azərbaycan</a
-                  ><button class="mapBtn">Xəritədə bax</button>
+                  <div class="address">
+                    <a href="/">Əhməd Cavad 7, İçərişəhər, Bakı, Azərbaycan</a>
+                  </div>
+                  <div class="btn">
+                    <button class="mapBtn">Xəritədə bax</button>
+                  </div>
                 </li>
               </ul>
             </div>
           </div>
-          <div class="footerForm"></div>
+          <div class="footerForm">
+            <form class="form">
+              <div class="formPart">
+                <div class="formLeftSide">
+                  <label for="section">Maraqlandığınız sahə</label>
+                  <select name="Java Backend" id="backend">
+                    <option value="Frontend">Frontend</option>
+                    <option value="uxui">UXUI</option>
+                  </select>
+                </div>
+                <div class="formRightSide">
+                  <label for="name">Adınız:</label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Lətif Kərim"
+                  />
+                </div>
+              </div>
+              <div class="formPart">
+                <div class="formLeftSide">
+                  <label for="phone">Əlaqə nömrəsi:</label>
+                  <input type="phone" value="+994 " />
+                </div>
+                <div class="formRightSide">
+                  <label for="time">Əlaqə üçün uyğun saat</label>
+                  <select name="15-17" id="15-17">
+                    <option value="17-19">17:00 - 19:00</option>
+                    <option value="13-15">13:00 - 15:00</option>
+                  </select>
+                </div>
+              </div>
+              <div class="textArea">
+                <label for="message">Qeyd:</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder="Qeyd əlavə edə bilərsiz"
+                ></textarea>
+              </div>
+              <div class="subBtn">
+                <button type="submit">Göndər</button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </footer>

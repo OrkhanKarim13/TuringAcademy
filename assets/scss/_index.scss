@@ -187,6 +187,34 @@
   }
 }
 
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -50%; 
+  width: 50%;
+  height: 100%;
+  background: rgba(17, 17, 17, );
+  transition: right 0.3s ease-in-out;
+  z-index: 999;
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border: none;
+    font-size: 28px;
+    background-color: transparent;
+    color: #fff;
+  }
+}
+
+.sidebar.active {
+  right: 0; /* Menüyü görünür hale getir */
+}
+
+
+
+
+
 .information {
   width: 100%;
   .infoContnet {
@@ -253,6 +281,18 @@
   }
 }
 
+.thirdSlider{
+  display: none;
+}
+
+
+
+@media (min-width: 822px) {
+  .information{
+display: block;
+
+  }
+}
 
 
 @media (max-width: 822px) {
@@ -442,4 +482,11 @@
       }
     }
   }
+
+
+  .information{
+    display: none;
+  }
 }
+
+

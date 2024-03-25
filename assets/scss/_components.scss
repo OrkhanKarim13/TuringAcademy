@@ -22,7 +22,27 @@
               font-style: normal;
               font-weight: 400;
               line-height: 100%;
+              position: relative;
+              &:hover::after {
+                width: 100%;
+                left: 0;
+              }
+              &::after {
+                background: none repeat scroll 0 0 transparent;
+                bottom: -10px;
+                content: "";
+                display: block;
+                height: 1px;
+                left: 50%;
+                position: absolute;
+                background: #fff;
+                transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                width: 0;
+              }
             }
+          }
+          .navItem:nth-child(4){
+            display: none;
           }
         }
       }
@@ -62,6 +82,8 @@
 
 .footer {
   width: 100%;
+  font-family: "DM Sans", sans-serif;
+  padding: 120px 0;
   .container {
     .footerContent {
       width: 100%;
@@ -82,6 +104,7 @@
           flex-direction: column;
           gap: 16px;
           .footerTitle {
+            width: 80%;
             color: #fff;
             font-family: "DM Sans", sans-serif;
             font-size: 48px;
@@ -125,7 +148,7 @@
               .mapBtn {
                 display: flex;
                 padding: 12px 24px;
-                align-items: flex-start;
+                align-items: center;
                 gap: 10px;
                 border-radius: 26px;
                 background: #222;
@@ -133,6 +156,154 @@
                 color: #fff;
               }
             }
+            .contactItem:nth-child(3) {
+              display: flex;
+              gap: 32px;
+              align-items: center;
+              .address {
+                width: 50%;
+                a {
+                  color: #fff;
+                  font-size: 24px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 150%;
+                }
+              }
+            }
+          }
+        }
+      }
+      .footerForm {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 32px;
+        border-radius: 16px;
+        background: rgba(30, 30, 30, 0.95);
+        backdrop-filter: blur(12px);
+        .form {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          gap: 32px;
+          .formPart {
+            width: 100%;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            .formLeftSide {
+              width: 50%;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              gap: 16px;
+              label {
+                color: #fff;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 115%;
+              }
+              input {
+                width: 100%;
+                padding: 20px 32px;
+                border-radius: 8px;
+                background: #222426;
+                border: none;
+                outline: none;
+                color: #fff;
+              }
+              select {
+                width: 100%;
+                padding: 20px 32px;
+                border-radius: 8px;
+                background: #222426;
+                border: none;
+                outline: none;
+                color: #fff;
+              }
+            }
+            .formRightSide {
+              width: 50%;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              gap: 16px;
+              label {
+                color: #fff;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 115%;
+              }
+              input {
+                width: 100%;
+                padding: 20px 32px;
+                border-radius: 8px;
+                background: #222426;
+                border: none;
+                outline: none;
+                color: #fff;
+              }
+              select {
+                width: 100%;
+                padding: 20px 32px;
+                border-radius: 8px;
+                background: #222426;
+                border: none;
+                outline: none;
+                color: #fff;
+              }
+            }
+          }
+        }
+        .textArea {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          label {
+            color: #fff;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 115%;
+          }
+          textarea {
+            width: 100%;
+            height: 128px;
+            padding: 20px 32px;
+            border-radius: 8px;
+            background: #222426;
+            border: none;
+            outline: none;
+            color: #fff;
+            font-family: "Dm sans", sans-serif;
+            resize: none;
+          }
+        }
+        .subBtn {
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+          button {
+            color: #fff;
+            font-family: "Chakra Petch", sans-serif;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 100%;
+            border-radius: 30px;
+            padding: 20px 56px;
+            border: 1px solid #02d4ff;
+            background: var(
+              --main-gr,
+              linear-gradient(95deg, #017dff 0%, #01d5ff 100%)
+            );
           }
         }
       }
