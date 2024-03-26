@@ -11,22 +11,24 @@ document
   // slider
 
   var swiper = new Swiper(".mySwiper", {
-    effect: "coverflow",
+    effect: "drag",
     grabCursor: false,
     centeredSlides: false,
     slidesPerView: "auto",
-
+    freeMode: true, 
+  
     coverflowEffect: {
       rotate: 0,
       stretch: 0,
       depth: 0,
-      modifier: 0,
+      modifier: 1000,
       slideShadows: true,
     },
     pagination: {
       el: ".swiper-pagination",
     },
   });
+  
 
 
   // footer select

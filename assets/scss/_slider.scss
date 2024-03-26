@@ -26,10 +26,15 @@ html {
       .swiper {
         width: 100%;
         .swiper-wrapper {
-          gap: 20px;
+          .swiper-slide {
+            margin-right: 12px;
+          }
+          .swiper-slide:nth-last-child(1){
+            margin: 0;
+          }
           .firstSlide {
             background-color: #fff;
-            width: 335px;
+            width: 25%;
             height: 432px;
 
             img {
@@ -93,9 +98,9 @@ html {
               }
             }
           }
-          .fourthSlide{
+          .fourthSlide {
             width: 212px;
-            img{
+            img {
               width: 100%;
               object-fit: contain;
             }
@@ -135,26 +140,35 @@ html {
         .swiper {
           width: 100%;
           .swiper-wrapper {
-            gap: 20px;
+            width: 100%;
+            gap: 0;
+            .swiper-slide {
+              width: 100%;
+              margin-right: 12px;
+            }
+            .swiper-slide:nth-last-child(1){
+              margin: 0;
+            }
+            
+
             .firstSlide {
               background-color: #fff;
-              width: 335px;
-              height: 432px;
-
+              width: 100%;
               img {
                 display: block;
                 width: 100%;
+                object-fit: contain;
               }
             }
             .secondSlide {
-              width: 430px;
-              height: 332px;
+              width: 100%;
               background-color: #fff;
             }
           }
+          
         }
       }
-      .thirdSlider{
+      .thirdSlider {
         display: block;
       }
     }
