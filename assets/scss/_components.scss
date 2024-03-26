@@ -4,6 +4,8 @@
   font-family: "DM Sans", sans-serif;
   z-index: 1000;
   .container {
+    margin:0;
+    padding: 24px 16px;
     .headerContent {
       width: 100%;
       display: flex;
@@ -201,6 +203,38 @@
               flex-direction: column;
               align-items: flex-start;
               gap: 16px;
+              .custom-select {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                position: relative;
+                .selected-option {
+                  width: 100%;
+                  padding: 20px 32px;
+                  border-radius: 8px;
+                  background: #222426;
+                  color: #fff;
+                  cursor: pointer;
+                }
+                .options {
+                  display: none;
+                  width: 100%;
+                  position: absolute;
+                  left: 0;
+                  bottom: -180px;
+                  background: #222426;
+                  border-radius: 8px;
+                  li {
+                    padding: 20px 32px;
+                    color: #fff;
+                    cursor: pointer;
+                    &:hover {
+                      background-color: #333;
+                    }
+                  }
+                }
+              }
               label {
                 color: #fff;
                 font-size: 16px;
@@ -217,15 +251,6 @@
                 outline: none;
                 color: #fff;
               }
-              select {
-                width: 100%;
-                padding: 20px 32px;
-                border-radius: 8px;
-                background: #222426;
-                border: none;
-                outline: none;
-                color: #fff;
-              }
             }
             .formRightSide {
               width: 50%;
@@ -233,6 +258,38 @@
               flex-direction: column;
               align-items: flex-start;
               gap: 16px;
+              .custom-select {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                position: relative;
+                .selected-option {
+                  width: 100%;
+                  padding: 20px 32px;
+                  border-radius: 8px;
+                  background: #222426;
+                  color: #fff;
+                  cursor: pointer;
+                }
+                .options {
+                  display: none;
+                  width: 100%;
+                  position: absolute;
+                  left: 0;
+                  bottom: -123px;
+                  background: #222426;
+                  border-radius: 8px;
+                  li {
+                    padding: 20px 32px;
+                    color: #fff;
+                    cursor: pointer;
+                    &:hover {
+                      background-color: #333;
+                    }
+                  }
+                }
+              }
               label {
                 color: #fff;
                 font-size: 16px;
@@ -317,7 +374,6 @@
     position: relative;
     font-family: "DM Sans", sans-serif;
     .container {
-      
       .headerContent {
         width: 100%;
         display: flex;
@@ -406,32 +462,32 @@
             }
           }
           .footerContact {
-            .contactList{
-                .contactItem:nth-child(3){
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    gap: 16px;
-                    .address{
-                        width: 100%;
-                    }
+            .contactList {
+              .contactItem:nth-child(3) {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+                .address {
+                  width: 100%;
                 }
+              }
             }
           }
         }
         .footerForm {
           width: 100%;
-          .form{
-            .formPart{
-                display: flex;
-                align-items: flex-start;
-                flex-direction: column;
-                .formLeftSide{
-                    width: 100%;
-                }
-                .formRightSide{
-                    width: 100%;
-                }
+          .form {
+            .formPart {
+              display: flex;
+              align-items: flex-start;
+              flex-direction: column;
+              .formLeftSide {
+                width: 100%;
+              }
+              .formRightSide {
+                width: 100%;
+              }
             }
           }
         }

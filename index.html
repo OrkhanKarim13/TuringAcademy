@@ -66,6 +66,9 @@
             </defs>
           </svg>
         </div>
+        <div class="heroCircles">
+          <img src="./assets/images/circles.svg" alt="circles">
+        </div>
         <div class="container">
           <div class="heroContent">
             <div class="infoLeft">
@@ -174,13 +177,13 @@
 
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide secondSlide"><img src="" alt=""></div>
-            <div class="swiper-slide secondSlide"><img src="" alt=""></div>
-            <div class="swiper-slide secondSlide"><img src="" alt=""></div>
-            <div class="swiper-slide secondSlide"><img src="" alt=""></div>
-            <div class="swiper-slide secondSlide"><img src="" alt=""></div>
-            <div class="swiper-slide secondSlide"><img src="" alt=""></div>
-            <div class="swiper-slide secondSlide"><img src="" alt=""></div>
+            <div class="swiper-slide secondSlide"><img src="" alt="" /></div>
+            <div class="swiper-slide secondSlide"><img src="" alt="" /></div>
+            <div class="swiper-slide secondSlide"><img src="" alt="" /></div>
+            <div class="swiper-slide secondSlide"><img src="" alt="" /></div>
+            <div class="swiper-slide secondSlide"><img src="" alt="" /></div>
+            <div class="swiper-slide secondSlide"><img src="" alt="" /></div>
+            <div class="swiper-slide secondSlide"><img src="" alt="" /></div>
           </div>
         </div>
       </section>
@@ -392,11 +395,15 @@
             <form class="form">
               <div class="formPart">
                 <div class="formLeftSide">
-                  <label for="section">Maraqlandığınız sahə</label>
-                  <select name="Java Backend" id="backend">
-                    <option value="Frontend">Frontend</option>
-                    <option value="uxui">UXUI</option>
-                  </select>
+                  <div class="custom-select" id="custom-select1">
+                    <label for="section">Maraqlandığınız sahə</label>
+                    <div class="selected-option">Java Backend</div>
+                    <ul class="options">
+                      <li data-value="Java Backend">Java Backend</li>
+                      <li data-value="Frontend">Frontend</li>
+                      <li data-value="UXUI">UXUI</li>
+                    </ul>
+                  </div>
                 </div>
                 <div class="formRightSide">
                   <label for="name">Adınız:</label>
@@ -405,20 +412,25 @@
                     name="name"
                     id="name"
                     placeholder="Lətif Kərim"
+                    maxlength="20"
                   />
                 </div>
               </div>
               <div class="formPart">
                 <div class="formLeftSide">
                   <label for="phone">Əlaqə nömrəsi:</label>
-                  <input type="phone" value="+994 " />
+                  <input type="phone" value="+994 " maxlength="15"/>
                 </div>
                 <div class="formRightSide">
-                  <label for="time">Əlaqə üçün uyğun saat</label>
-                  <select name="15-17" id="15-17">
-                    <option value="17-19">17:00 - 19:00</option>
-                    <option value="13-15">13:00 - 15:00</option>
-                  </select>
+                  <div class="custom-select" id="custom-select2">
+                    <label for="section">Əlaqə üçün uyğun saat</label>
+                    <div class="selected-option">13:00-15:00</div>
+                    <ul class="options">
+                      <li data-value="15:00-17:00">15:00-17:00</li>
+                      <li data-value="17:00-19:00">17:00-19:00</li>
+                     
+                    </ul>
+                  </div>
                 </div>
               </div>
               <div class="textArea">

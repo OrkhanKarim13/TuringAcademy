@@ -1,13 +1,20 @@
 .hero {
   width: 100%;
+  
   .heroDesign {
     width: 549px;
     height: 750px;
     overflow: hidden;
     position: absolute;
     left: 0;
-    top: -25px;
+    top: -0px;
     z-index: -100;
+  }
+  .heroCircles{
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0.7;
   }
   .container {
     .heroContent {
@@ -355,6 +362,9 @@
       top: -30px;
       overflow: hidden;
       width: 100%;
+    }
+    .heroCircles{
+display: none;
     }
     .container {
       .heroContent {
