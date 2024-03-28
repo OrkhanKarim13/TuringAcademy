@@ -215,12 +215,12 @@
 
 .sidebar {
   position: fixed;
-  top: 0;
-  right: -50%;
-  width: 50%;
+  bottom: -100%;
+  right: 0;
+  width: 100%;
   height: 100%;
   background: rgb(17, 17, 17);
-  transition: right 0.3s ease-in-out;
+  transition: bottom 0.3s ease-in-out;
   z-index: 999;
 }
 .sidebar .close-btn {
@@ -233,11 +233,23 @@
   color: #fff;
   cursor: pointer;
 }
-
 .sidebar.active {
-  right: 0;
+  bottom: 0;
 }
 
+@media (min-width: 822px) {
+  .sidebar {
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    bottom: 0;
+    right: -100%;
+    transition: right 0.3s ease-in-out;
+  }
+  .sidebar.active {
+    right: 0;
+  }
+}
 .team {
   width: 100%;
 }
