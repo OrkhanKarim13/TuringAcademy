@@ -5,7 +5,7 @@
   z-index: 1000;
   .container {
     margin:0;
-    padding: 24px 16px;
+    padding: 24px 56px;
     .headerContent {
       width: 100%;
       display: flex;
@@ -203,38 +203,73 @@
               flex-direction: column;
               align-items: flex-start;
               gap: 16px;
-              .custom-select {
+              .dropdown {
                 width: 100%;
-                display: flex;
-                flex-direction: column;
-                gap: 16px;
+
                 position: relative;
-                .selected-option {
-                  width: 100%;
+                display: inline-block;
+              
+                .select {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  cursor: pointer;
+                   width: 100%;
                   padding: 20px 32px;
                   border-radius: 8px;
                   background: #222426;
                   color: #fff;
-                  cursor: pointer;
+              
+                  .selected {
+                    display: block;
+                  }
+              
+                  .caret {
+                    display: inline-block;
+                    width: 0;
+                    height: 0;
+                    margin-left: 5px;
+                    vertical-align: middle;
+                    border-top: 5px solid #fff;
+                    border-right: 5px solid transparent;
+                    border-left: 5px solid transparent;
+                  }
                 }
-                .options {
-                  display: none;
+              
+                .menu {
                   width: 100%;
                   position: absolute;
+                  top: 100%;
                   left: 0;
-                  bottom: -180px;
-                  background: #222426;
+                  z-index: 1;
+                  display: none;
+                  margin: 0;
+                  padding: 0;                  padding: 20px 32px;
                   border-radius: 8px;
+                  background: #222426;
+              color: #fff;
                   li {
-                    padding: 20px 32px;
-                    color: #fff;
+                    padding: 10px;
                     cursor: pointer;
+              
                     &:hover {
-                      background-color: #333;
+                     color: #fff;
+                    }
+              
+                    &.active {
+                      border: 1px solid #fff;
+                      border-radius: 8px;
                     }
                   }
                 }
+              
+                &.open {
+                  .menu {
+                    display: block;
+                  }
+                }
               }
+              
               label {
                 color: #fff;
                 font-size: 16px;
@@ -258,35 +293,69 @@
               flex-direction: column;
               align-items: flex-start;
               gap: 16px;
-              .custom-select {
+              .dropdown {
                 width: 100%;
-                display: flex;
-                flex-direction: column;
-                gap: 16px;
+
                 position: relative;
-                .selected-option {
-                  width: 100%;
+                display: inline-block;
+              
+                .select {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  cursor: pointer;
+                   width: 100%;
                   padding: 20px 32px;
                   border-radius: 8px;
                   background: #222426;
                   color: #fff;
-                  cursor: pointer;
+              
+                  .selected {
+                    display: block;
+                  }
+              
+                  .caret {
+                    display: inline-block;
+                    width: 0;
+                    height: 0;
+                    margin-left: 5px;
+                    vertical-align: middle;
+                    border-top: 5px solid #fff;
+                    border-right: 5px solid transparent;
+                    border-left: 5px solid transparent;
+                  }
                 }
-                .options {
-                  display: none;
+              
+                .menu {
                   width: 100%;
                   position: absolute;
+                  top: 100%;
                   left: 0;
-                  bottom: -123px;
-                  background: #222426;
+                  z-index: 1;
+                  display: none;
+                  margin: 0;
+                  padding: 0;                  padding: 20px 32px;
                   border-radius: 8px;
+                  background: #222426;
+              color: #fff;
                   li {
-                    padding: 20px 32px;
-                    color: #fff;
+                    padding: 10px;
                     cursor: pointer;
+              
                     &:hover {
-                      background-color: #333;
+                     color: #fff;
                     }
+              
+                    &.active {
+                      border: 1px solid #fff;
+                      border-radius: 8px;
+                    }
+                  }
+                }
+              
+                &.open {
+                  .menu {
+                    display: block;
                   }
                 }
               }

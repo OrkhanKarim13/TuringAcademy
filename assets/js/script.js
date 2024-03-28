@@ -53,59 +53,29 @@ document.querySelector(".close").addEventListener("click", function () {
 });
 
 // select options
-document.addEventListener("DOMContentLoaded", function () {
-  const select1 = document.getElementById("custom-select1");
-  const selectedOption1 = select1.querySelector(".selected-option");
-  const options1 = select1.querySelector(".options");
+document.addEventListener("DOMContentLoaded", function() {
+  const dropdowns = document.querySelectorAll('.dropdown');
 
-  select1.addEventListener("click", function () {
-    options1.style.display =
-      options1.style.display === "none" ? "block" : "none";
-  });
+  dropdowns.forEach(dropdown => {
+    const select = dropdown.querySelector('.select');
+    const menu = dropdown.querySelector('.menu');
 
-  options1.addEventListener("click", function (e) {
-    const clickedOption = e.target.dataset.value;
-    if (clickedOption) {
-      selectedOption1.textContent = clickedOption;
-      options1.style.display = "none";
-      const allOptions = options1.querySelectorAll("li");
-      allOptions.forEach((option) => {
-        if (option.dataset.value !== clickedOption) {
-          option.style.display = "block";
-        }
-      });
-    }
-  });
+    select.addEventListener('click', function() {
+      dropdown.classList.toggle('open');
+    });
 
-  const select2 = document.getElementById("custom-select2");
-  const selectedOption2 = select2.querySelector(".selected-option");
-  const options2 = select2.querySelector(".options");
+    menu.addEventListener('click', function(e) {
+      if (e.target.tagName === 'LI') {
+        const selectedText = e.target.textContent;
+        dropdown.querySelector('.selected').textContent = selectedText;
+        dropdown.classList.remove('open');
+      }
+    });
 
-  select2.addEventListener("click", function () {
-    options2.style.display =
-      options2.style.display === "none" ? "block" : "none";
-  });
-
-  options2.addEventListener("click", function (e) {
-    const clickedOption = e.target.dataset.value;
-    if (clickedOption) {
-      selectedOption2.textContent = clickedOption;
-      options2.style.display = "none";
-      const allOptions = options2.querySelectorAll("li");
-      allOptions.forEach((option) => {
-        if (option.dataset.value !== clickedOption) {
-          option.style.display = "block";
-        }
-      });
-    }
-  });
-
-  document.addEventListener("click", function (e) {
-    if (!select1.contains(e.target)) {
-      options1.style.display = "none";
-    }
-    if (!select2.contains(e.target)) {
-      options2.style.display = "none";
-    }
+    document.addEventListener('click', function(e) {
+      if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove('open');
+      }
+    });
   });
 });

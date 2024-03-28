@@ -112,6 +112,7 @@
           </div>
         </div>
       </section>
+      
       <section class="cardBox">
         <div class="container">
           <div class="cardBoxContent">
@@ -395,13 +396,17 @@
             <form class="form">
               <div class="formPart">
                 <div class="formLeftSide">
-                  <div class="custom-select" id="custom-select1">
-                    <label for="section">Maraqlandığınız sahə</label>
-                    <div class="selected-option">Java Backend</div>
-                    <ul class="options">
-                      <li data-value="Java Backend">Java Backend</li>
-                      <li data-value="Frontend">Frontend</li>
-                      <li data-value="UXUI">UXUI</li>
+                  <label for="section">Maraqlandığınız sahə</label>
+                  <div class="dropdown">
+                    <div class="select">
+
+                      <span class="selected">Java Backend</span>
+                      <div class="caret"></div>
+                    </div>
+                    <ul class="menu">
+                      <li>Frontend</li>
+                      <li>UXUI</li>
+                      <li class="active">Java backend</li>
                     </ul>
                   </div>
                 </div>
@@ -422,13 +427,16 @@
                   <input type="phone" value="+994 " maxlength="15"/>
                 </div>
                 <div class="formRightSide">
-                  <div class="custom-select" id="custom-select2">
-                    <label for="section">Əlaqə üçün uyğun saat</label>
-                    <div class="selected-option">13:00-15:00</div>
-                    <ul class="options">
-                      <li data-value="15:00-17:00">15:00-17:00</li>
-                      <li data-value="17:00-19:00">17:00-19:00</li>
-                     
+                  <label for="section">Əlaqə üçün uyğun saat</label>
+                  <div class="dropdown">
+                    <div class="select">
+                      <span class="selected">13:00 - 15:00</span>
+                      <div class="caret"></div>
+                    </div>
+                    <ul class="menu">
+                      <li>15:00 - 17:00</li>
+                      <li>17:00 - 19:00</li>
+                      <li class="active">13:00 - 15:00</li>
                     </ul>
                   </div>
                 </div>

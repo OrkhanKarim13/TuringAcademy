@@ -1,6 +1,6 @@
 .hero {
   width: 100%;
-  
+
   .heroDesign {
     width: 549px;
     height: 750px;
@@ -10,7 +10,7 @@
     top: -0px;
     z-index: -100;
   }
-  .heroCircles{
+  .heroCircles {
     position: absolute;
     right: 0;
     top: 0;
@@ -255,11 +255,12 @@
 }
 
 .sidebar.active {
-  right: 0; /* Menüyü görünür hale getir */
+  right: 0;
 }
 
 .team {
   width: 100%;
+  
   .container {
     .sliderText {
       width: 30%;
@@ -268,7 +269,7 @@
       font-size: 20px;
       font-style: normal;
       font-weight: 400;
-      line-height: 125%; /* 25px */
+      line-height: 125%;
     }
   }
   .teamSlider {
@@ -363,8 +364,8 @@
       overflow: hidden;
       width: 100%;
     }
-    .heroCircles{
-display: none;
+    .heroCircles {
+      display: none;
     }
     .container {
       .heroContent {
@@ -508,7 +509,7 @@ display: none;
   }
   .cardBox {
     width: 100%;
-    padding-top: 96px ;
+    padding-top: 96px;
     .cardBoxContent {
       width: 100%;
       display: flex;
@@ -544,9 +545,9 @@ display: none;
     }
   }
 
-  .team{
-    .container{
-      .sliderText{
+  .team {
+    .container {
+      .sliderText {
         width: 100%;
       }
     }
