@@ -348,7 +348,7 @@
   .hero .heroDesign {
     position: absolute;
     left: 0;
-    top: -30px;
+    top: 0;
     overflow: hidden;
     width: 100%;
   }
@@ -1144,6 +1144,9 @@ html body .slider .swiper .swiper-wrapper .fourthSlide img {
     width: 100%;
     position: relative;
     font-family: "DM Sans", sans-serif;
+  }
+  .header .container {
+    padding: 24px 16px;
   }
   .header .container .headerContent {
     width: 100%;
